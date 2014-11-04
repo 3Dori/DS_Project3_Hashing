@@ -17,10 +17,11 @@ To check whether the program will output nothing if all N inputs are negative.
 
 ### Case input
 	7
-	0 1 2 3 4 5 6
+	42 8 23 3 18 40 34
+	(These 7 numbers respectively have remainder 0, 1, 2, 3, 4, 5 and 6 when divided by 7, so there’s no collision.)
 
 ### Expected result
-	0 1 2 3 4 5 6
+	3 8 18 23 34 40 42
 
 ## Test3
 
@@ -29,10 +30,9 @@ To check whether the program will correctly handle collisions.
 
 ### Case input
 	10
-	13 3 -1 83 73 63 53 43 33 23
-
+	13 3 -1 83 43 63 33 73 53 23
 ### Expected result
-	83 73 63 53 43 33 23 13 3
+	83 43 63 33 73 53 23 13 3
 
 ## Test4
 
