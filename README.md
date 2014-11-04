@@ -9,7 +9,7 @@ the input sequence from the given status of the hash table. Whenever
 there are multiple choices, the smallest number is always taken.
 ##Input Specification
 Each input file contains one test case. For each test case, the first
-line contains a positive integer `N (<= 100)`, which is the size
+line contains a positive integer `N (<= 1000)`, which is the size
 of the hash table. The next line contains N integers, separated by a
 space. A negative integer represents an empty cell in the hash
 table. It is guaranteed that all the non-negative integers are
