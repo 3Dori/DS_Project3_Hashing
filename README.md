@@ -1,6 +1,9 @@
 #Project 3: Hashing
+
+**Note: This is a group work. I work as a tester and hence all the code here is for testing the correctness of the code written by another group member.**
+
 Given a hash table of size N, we can define a hash function `H(x) =
-x%N`.  Suppose that the linear probing is used to solve collisions,
+x % N`.  Suppose that the linear probing is used to solve collisions,
 we can easily obtain the status of the hash table with a given
 sequence of input numbers.
 
