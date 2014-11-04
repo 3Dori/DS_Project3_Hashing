@@ -1,3 +1,8 @@
+#!/usr/local/bin/python3
+
+'''
+Hash table routine (only insert operation)
+'''
 def linear_probing(collision_num):
     return 1
 
@@ -17,9 +22,8 @@ class HashTable(object):
         current_index = hash_value
         while self.hash_table[current_index] != None:
             if self.hash_table[current_index] == elem: # already exist
-                pass
-            else:
-                collision_num += 1
+                break
+            collision_num += 1
             current_index += self.probe(collision_num)
             while current_index >= self.table_size:
                 current_index -= self.table_size
@@ -35,18 +39,23 @@ class HashTable(object):
 
 def main():
     import sys
+    '''
     try:
         sys.stdin = open('input.txt', 'r')
     except FileNotFoundError:
         print('Cannot open input.txt')
         exit(1)
+    '''
     N = int(input())
     inputs = map(int, input().split())
     H = HashTable(N)
     for i in inputs:
         H.insert(i)
     for i in range(N):
-        print(H.hash_table[i], end=' ')
+        if H.hash_table[i] == None:
+            print(-1, end=' ')
+        else:
+            print(H.hash_table[i], end=' ')
 
 if __name__ == '__main__':
     main()
