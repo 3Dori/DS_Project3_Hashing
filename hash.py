@@ -12,19 +12,19 @@ class HashTable(object):
         collision_num = 0
         hash_value = self.hash_func(elem)
         current_index = hash_value
-        if self.hash_table[hash_value] == elem:
-            pass
-        elif self.hash_table[hash_value] == None:
-            self.hash_table[hash_value] = elem
-        else:
+        while self.hash_table[current_index] != None:
+            if self.hash_table[current_index] == elem: # already exist
+                pass
+            else:
+                collision_num += 1
             current_index += self.probe(collision_num)
             while current_index >= self.table_size:
                 current_index -= self.table_size
             if current_index == hash_value: # there's a infinite loop
                 print('Infinite loop while inserting {}'.format(elem))
                 exit(1)
-            else:
-                self.hash_table[current_index] = elem
+        else:
+            self.hash_table[current_index] = elem # successfully inserted
 
 def main():
     import sys
